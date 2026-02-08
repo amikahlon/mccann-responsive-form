@@ -1,0 +1,16 @@
+:root {
+  --bg: #0f0f0f;
+  --box: #0a0a0a;
+  --line: rgba(255,255,255,0.15);
+
+  --txt: #ffffff;
+  --muted: rgba(255,255,255,0.72);
+  --tiny: rgba(255,255,255,0.52);
+
+  --cyan: #08d6d5;
+  --cyanText: #001a1a;
+
+  --err: #ff5252;
+
+  --w: 340px;
+}

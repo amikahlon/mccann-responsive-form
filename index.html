@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McCANN Responsive Form</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+
+  <body>
+    <div class="bg" id="bg">
+      <section
+        class="box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="t1"
+        aria-describedby="t2"
+      >
+        <header class="top">
+          <button class="xbtn" id="xbtn" type="button" aria-label="סגירה">×</button>
+        </header>
+
+
+
+        <!-- Form -->
+        <main class="pad" id="viewForm">
+          <img class="logo" src="assets/images/logo.svg" alt="לוגו" />
+
+          <h1 class="h1" id="t1">חשמלית משפחתית<br />מחכה לכם באולמות התצוגה</h1>
+
+          <p class="p1">השאירו פרטים ונעשה את זה <span class="easy">EASY</span></p>
+
+          <p class="p2" id="t2">כל השדות המסומנים ב-* הינם חובה</p>
+
+          <form id="myForm" novalidate>
+            <div class="row" data-field="name">
+              <label class="lbl" for="name">שם מלא*</label>
+              <input
+                class="inp"
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                aria-describedby="e-name"
+                aria-invalid="false"
+              />
+              <span class="okmark" id="nameOk" aria-hidden="true">✓</span>
+            </div>
+            <p class="err" id="e-name" aria-live="polite"></p>
+
+            <div class="row" data-field="phone">
+              <label class="lbl" for="phone">נייד*</label>
+              <input
+                class="inp"
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel"
+                required
+                aria-describedby="e-phone"
+                aria-invalid="false"
+              />
+              <span class="okmark" id="phoneOk" aria-hidden="true">✓</span>
+            </div>
+            <p class="err" id="e-phone" aria-live="polite"></p>
+
+            <div class="row row-select" data-field="city">
+              <label class="lbl" for="city">אולם תצוגה*</label>
+              <select
+                class="inp sel"
+                id="city"
+                name="city"
+                required
+                aria-describedby="e-city"
+                aria-invalid="false"
+              >
+                <option value="">אולם תצוגה</option>
+              </select>
+              <span class="chev" id="cityChev" aria-hidden="true">⌄</span>
+              <span class="okmark" id="cityOk" aria-hidden="true">✓</span>
+            </div>
+            <p class="err" id="e-city" aria-live="polite"></p>
+
+            <div class="row" data-field="email">
+              <label class="lbl" for="email">מייל*</label>
+              <input
+                class="inp"
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-describedby="e-email"
+                aria-invalid="false"
+              />
+              <span class="okmark" id="emailOk" aria-hidden="true">✓</span>
+            </div>
+            <p class="err" id="e-email" aria-live="polite"></p>
+
+
+            <div class="agreeWrap">
+              <label class="agree" for="ok">
+                <input id="ok" name="ok" type="checkbox" />
+                <span>
+                  מאשר קבלת דיוור ותוכן שיווקי ופרסומי מהחברות השונות בקבוצת באמצעות
+                  סמס, וואטסאפ, דואר אלקטרוני, וחיוג אוטומטי. רשימת *החברות המפורטות
+                  במדיניות פרטיות של האתר
+                </span>
+              </label>
+            </div>
+
+            <button class="btn btn-main" type="submit">חזרו אלי טלפונית</button>
+            <button class="btn btn-line" id="onlineBtn" type="button">
+              למינוי חודשי אונליין
+            </button>
+          </form>
+        </main>
+
+
+
+        <!-- Thank You -->
+        <main class="pad hide" id="viewThanks" aria-label="תודה">
+          <h2 class="h1" tabindex="-1">תודה! קיבלנו את הפרטים</h2>
+          <p class="p1">נציג יחזור אליך בהקדם</p>
+
+          <div class="icons" aria-label="קישורים">
+            <a class="iconLink" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+              </svg>
+            </a>
+
+            <a class="iconLink" href="https://freesbe.com/" target="_blank" rel="noopener noreferrer" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M2 12h20" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 2c3 2.7 5 6.3 5 10s-2 7.3-5 10c-3-2.7-5-6.3-5-10s2-7.3 5-10Z" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </a>
+
+            <a class="iconLink" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    
+    <script type="module" src="js/form-handler.js"></script>
+  </body>
+</html>
+
+
